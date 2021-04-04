@@ -4,29 +4,20 @@
 
 ## 機能
 法令のテキストデータの条・項・号番号、編・章・節・款等の番号、括弧書きその他の部分をハイライト表示します。
+
 ![](imgs/img1.png)
+
 - 留意点
 	- 上のスクリーンショット画像は[Darcula Theme
 ](https://marketplace.visualstudio.com/items?itemName=rokoroku.vscode-theme-darcula)というテーマを適用した場合のものです。テーマが変わると、ハイライト表示の配色も変わります。
-  - 括弧書き部分のハイライトについては、括弧が3重にネストしているケースまで対応していますが、完璧ではありません（完璧にやろうとすると私のスキルでは動作が重くなってしまうのでやめた）。2重・3重の括弧書き部分については1重の場合と色を変えていますが、これも完璧ではありません。
+  - 括弧書き部分のハイライトについては、下の画像の通り、括弧が3重にネストしているケースまで対応しているはずですが、うまくハイライトできないこともあるかもしれません（完璧にやろうとすると私のスキルでは動作が重くなってしまうのでやめた）。2重・3重の括弧書き部分については1重の場合と色を変えていますが、これも完璧ではありません。
 
 ![](imgs/img2.png)
 
 
-## Requirements
+## 使い方
+[e-gov法令検索](https://elaws.e-gov.go.jp)などから法令のテキストデータをコピペして、".rpw"という拡張子を付けて保存すると、ハイライトが適用されるようになります。
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
 
 ## アウトライン表示（CodeMapを使う）
 この拡張を入れただけでは、サイドパネルにアウトラインを表示することはできません。アウトライン表示については、CodeMapという[拡張機能](https://marketplace.visualstudio.com/items?itemName=oleg-shilo.codemap)をインストールすることで可能になります。私はこの拡張機能をインストールして、settings.jsonに下記のように記述しています：

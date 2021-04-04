@@ -3,6 +3,7 @@
     "displayName": "houreiHighlight",
     "description": "法令テキストのハイライト表示",
     "publisher": "miyawaki",
+    "repository": {"url": "https://github.com/m-miyawaki/houreihighlight"},
     "version": "0.0.2",
     "engines": {
         "vscode": "^1.46.0"
