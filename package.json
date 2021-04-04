@@ -1,0 +1,26 @@
+{
+    "name": "houreihighlight",
+    "displayName": "houreiHighlight",
+    "description": "法令テキストのハイライト表示",
+    "publisher": "miyawaki",
+    "version": "0.0.2",
+    "engines": {
+        "vscode": "^1.46.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "roppow",
+            "aliases": ["Hourei", "roppow"],
+            "extensions": [".rpw"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "roppow",
+            "scopeName": "source.ts.hourei",
+            "path": "./syntaxes/roppow.tmLanguage.json"
+        }]
+    }
+}

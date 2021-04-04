@@ -1,0 +1,75 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Hourei",
+	"patterns": [
+		{
+			"include": "#jou"
+		},
+		{
+			"include": "#shou"
+		},
+		{
+			"include": "#kakko_title"
+		},
+		{
+			"include": "#kakko1"
+		},
+		{
+			"include": "#kakko2"
+		},
+		{
+			"include": "#gou"
+		}
+	],
+	"repository": {
+		"jou": {
+			"patterns": [{
+				"name": "variable.other.object.property.ts.hourei",
+				"match": "^第[一二三四五六七八九十百千〇]+条(の[一二三四五六七八九十]+)?[ 　]"
+			}]
+		},
+		"shou": {
+			"patterns": [{
+				"name": "entity.name.function.ts.hourei",
+				"match": "[ 　]*(?:第[一二三四五六七八九十百〇]+[編章節款][ 　]+[^。 　]+|附[ 　]*則[ 　]*(?:（.+）[ 　]*)?抄?|別[ 　]*表[^。]*)$"
+			}]
+		},
+			"kakko_title": {
+			"patterns": [{
+				"name": "string.quoted.single.ts.hourei",
+				"match": "^（[^（]+）$"
+			}]
+		},
+		"gou": {
+			"patterns": [{
+				"name": "keyword.control.ts.hourei",
+				"match": "^[一二三四五六七八九十百千〇イロハニホヘトチ０-９]+(?:の[一二三四五六七八九十]+)?[ 　]"
+			}]
+			
+		},
+		"kakko1": {
+			"patterns": [{
+				"name": "comment.line.double-slash.ts.hourei",
+				"match": "(?<=[^（]+)（[^（）]+）"
+			}]
+		},
+		"kakko2": {
+				"name": "comment.line.double-slash.ts.hourei",
+				"begin": "（[^（）]*((?:（[^（）]+）)|(?:（[^（]*（[^（）]+）[^）]*）))",
+				"beginCaptures" :{
+					"1" :{"name": "constant.numeric.decimal.ts.hourei"}
+				},
+				"end":	"((?:（[^（）]+）)|(?:（[^（）]*（[^（）]+）[^（）]*）))?[^（）]*）",
+				"endCaptures": {
+					"1" :{"name": "constant.numeric.decimal.ts.hourei"}
+				},
+				"patterns": [{	
+					"name": "constant.numeric.decimal.ts.hourei",
+					"match": "(?:（[^（）]+）)|(?:（[^（）]*（[^（）]+）[^（）]*）)"
+					}]
+				
+		}
+		
+	},
+	"scopeName": "source.ts.hourei"
+}
