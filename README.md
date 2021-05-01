@@ -1,4 +1,4 @@
-# houreihighlight README
+# HoureiHighlight README
 
 法令テキストのハイライト表示
 

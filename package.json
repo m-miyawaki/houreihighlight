@@ -1,10 +1,14 @@
 {
     "name": "houreihighlight",
-    "displayName": "houreiHighlight",
+    "displayName": "HoureiHighlight",
     "description": "法令テキストのハイライト表示",
     "publisher": "miyawaki",
-    "repository": {"url": "https://github.com/m-miyawaki/houreihighlight"},
-    "version": "0.0.2",
+    "repository": {
+		"type": "git",
+        "url": "https://github.com/m-miyawaki/houreihighlight"
+    },
+    "license": "MIT-0",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.46.0"
     },
