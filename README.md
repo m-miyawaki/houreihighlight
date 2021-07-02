@@ -3,7 +3,7 @@
 法令テキストのハイライト表示
 
 ## 機能
-法令のテキストデータの条・項・号番号、編・章・節・款等の番号、括弧書きその他の部分をハイライト表示します。
+法令のテキストデータの条・項・号番号、編・章・節・款等の番号、括弧書きなどの部分をハイライト表示します。
 
 ![](imgs/img1.png)
 
@@ -20,7 +20,7 @@
 
 
 ## アウトライン表示（CodeMapを使う）
-この拡張を入れただけでは、サイドパネルにアウトラインを表示することはできません。アウトライン表示については、CodeMapという[拡張機能](https://marketplace.visualstudio.com/items?itemName=oleg-shilo.codemap)をインストールすることで可能になります。私はこの拡張機能をインストールして、settings.jsonに下記のように記述しています：
+この拡張を入れただけでは、サイドパネルにアウトラインを表示することはできません。アウトライン表示については、CodeMapという[拡張機能](https://marketplace.visualstudio.com/items?itemName=oleg-shilo.codemap)をインストールすることで可能になります。私はこの拡張機能をインストールして、`settings.json`に下記のように記述しています：
 
 ```
  {
@@ -43,11 +43,4 @@
 
 ![](imgs/img3.png)
 
-詳細については[ここ](https://github.com/oleg-shilo/codemap.vscode/wiki/Adding-custom-mappers)を参照してください。
-## その他
-不具合等については、私の[Twitterアカウント(ID: m_miyawaki)](https://twitter.com/m_miyawaki)に連絡してください。
-
-## Release Notes
-
-### 1.0.0
-公開
+詳細についてはCodeMapの[wiki](https://github.com/oleg-shilo/codemap.vscode/wiki/Adding-custom-mappers)を参照してください。

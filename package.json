@@ -5,7 +5,10 @@
     "publisher": "miyawaki",
     "repository": {
 		"type": "git",
-        "url": "https://github.com/m-miyawaki/houreihighlight"
+        "url": "https://github.com/m-miyawaki/houreihighlight.git"
+    },
+    "bugs": {
+        "url": "https://github.com/m-miyawaki/houreihighlight/issues"
     },
     "license": "MIT-0",
     "version": "1.0.0",
