@@ -31,5 +31,6 @@
 			"prefix": "<image>",
 			"icon": "none"
 		}
-	]
+	],
+	"quickpicksnippets.addToEditorContextMenu": true
 }
