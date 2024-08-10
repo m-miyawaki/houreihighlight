@@ -12,13 +12,13 @@
 			"include": "#kakko_title"
 		},
 		{
-			"include": "#kakko1"
-		},
-		{
-			"include": "#kakko2"
+			"include": "#kakko2new2"
 		},
 		{
 			"include": "#gou"
+		},
+		{
+			"include": "#kagikakko"
 		}
 	],
 	"repository": {
@@ -31,7 +31,7 @@
 		"shou": {
 			"patterns": [{
 				"name": "entity.name.function.ts.hourei",
-				"match": "[ 　]*(?:第[一二三四五六七八九十百〇]+[編章節款目](の[一二三四五六七八九十百の]+)?[ 　]+[^。 　]+|附[ 　]*則[ 　]*(?:（.+）[ 　]*)?抄?|別[ 　]*表[^。]*)$"
+				"match": "^[ 　]*(?:第[一二三四五六七八九十百〇]+[編章節款目](の[一二三四五六七八九十百の]+)?[ 　]+[^。 　]+|附[ 　]*則[ 　]*(?:（.+）[ 　]*)?抄?|別[ 　]*表[^。]*)$"
 			}]
 		},
 			"kakko_title": {
@@ -47,27 +47,37 @@
 			}]
 			
 		},
-		"kakko1": {
-			"patterns": [{
-				"name": "comment.line.double-slash.ts.hourei",
-				"match": "(?<=[^（]+)（[^（）１２３４５６７８９]+）"
-			}]
+		"kagikakko": {
+			"contentName": "constant.language.escape.ts.hourei",
+			"begin": "「",
+			"end":"(」|$)",
+			"patterns" : [{
+				"include": "#kagikakko"}]		
 		},
-		"kakko2": {
-				"name": "comment.line.double-slash.ts.hourei",
-				"begin": "（[^（）１２３４５６７８９]*((?:（[^（）１２３４５６７８９]+）)|(?:（[^（]*（[^（）１２３４５６７８９]+）[^）１２３４５６７８９]*）))",
-				"beginCaptures" :{
-					"1" :{"name": "constant.numeric.decimal.ts.hourei"}
-				},
-				"end":	"((?:（[^（）１２３４５６７８９]+）)|(?:（[^（）１２３４５６７８９]*（[^（）１２３４５６７８９]+）[^（）１２３４５６７８９]*）))?[^（）１２３４５６７８９]*）",
-				"endCaptures": {
-					"1" :{"name": "constant.numeric.decimal.ts.hourei"}
-				},
-				"patterns": [{	
-					"name": "constant.numeric.decimal.ts.hourei",
-					"match": "(?:（[^（）１２３４５６７８９]+）)|(?:（[^（）１２３４５６７８９]*（[^（）１２３４５６７８９]+）[^（）１２３４５６７８９]*）)"
-					}]
-				
+		"kakko2new2": {
+				"patterns": [
+						{
+								"begin": "（(?=[^０-９ａ-ｚ])",
+								"end": "(）|$)",
+								"name": "comment.line.double-slash.ts.hourei", 
+								"patterns": [
+										{
+											"begin": "（(?=[^０-９ａ-ｚ])",
+												"end": "(）|$)",
+												"name": "constant.language.ts.hourei",
+												"patterns":[
+													{
+													"begin": "（(?=[^０-９ａ-ｚ])",
+												"end": "(）|$)",
+													"name": "comment.line.double-slash.ts.hourei",
+													"patterns":[
+													{"include":"#kakko2new2"
+													}]
+										}
+								]
+						}
+				]
+		}]
 		}
 		
 	},
