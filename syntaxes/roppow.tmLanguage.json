@@ -58,27 +58,22 @@
 				"patterns": [
 						{
 								"begin": "（(?=[^０-９ａ-ｚ])",
-								"end": "(）|$)",
+								"end": "((?<=[^０-９ａ-ｚ])）|$)",
 								"name": "comment.line.double-slash.ts.hourei", 
 								"patterns": [
 										{
 											"begin": "（(?=[^０-９ａ-ｚ])",
-												"end": "(）|$)",
+												"end": "((?<=[^０-９ａ-ｚ])）|$)",
 												"name": "constant.language.ts.hourei",
 												"patterns":[
 													{
-													"begin": "（(?=[^０-９ａ-ｚ])",
-												"end": "(）|$)",
-													"name": "comment.line.double-slash.ts.hourei",
-													"patterns":[
-													{"include":"#kakko2new2"
-													}]
-										}
+													"include":"#kakko2new2"
+													}
+													]
+											}
 								]
-						}
-				]
-		}]
-		}
+						}]
+			}
 		
 	},
 	"scopeName": "source.ts.hourei"
